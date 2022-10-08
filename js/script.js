@@ -34,9 +34,9 @@ const renderPokemon = async (pokemon) => {
     searchPokemon = data.id
     /* usando colchetes no lugar do ponto pois o ponto deu erro!! // por ser imagem usar o SRC */
     } else {
-        pokemonName.innerHTML = 'Error 404 :´(';
+        pokemonName.innerHTML = 'Error 404 >:(';
         pokemonNumber.innerHTML = "";
-        pokemonImage.src = "https://thumbs.dreamstime.com/z/carpinteiro-de-gato-perto-do-cubo-imposs%C3%ADvel-o-em-um-capacete-amarelo-com-grande-martelo-est%C3%A1-construindo-campo-163897424.jpg" 
+        pokemonImage.src = "./images/blabo.gif" 
     }
 }
 
