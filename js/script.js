@@ -10,7 +10,7 @@ const buttonProx = document.querySelector('.btn-prox')
 let searchPokemon = 1;
 
 const fetchpokemon = async (pokemon) => {
-    const apiResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
+    const apiResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`); /**função pra pegar os dados da API*/
 
     if (apiResponse.status == 200) {
         const data = await apiResponse.json();
@@ -31,8 +31,8 @@ const renderPokemon = async (pokemon) => {
     pokemonName.innerHTML = data.name;
     pokemonNumber.innerHTML = data.id; 
     pokemonImage.src = data['sprites']['versions']['generation-v']['black-white']['animated'][`front_default`];
-    searchPokemon = data.id
     /* usando colchetes no lugar do ponto pois o ponto deu erro!! // por ser imagem usar o SRC */
+    searchPokemon = data.id
     } else {
         pokemonName.innerHTML = 'Error 404 >:(';
         pokemonNumber.innerHTML = "";
@@ -43,7 +43,7 @@ const renderPokemon = async (pokemon) => {
 form.addEventListener('submit', (event) =>{
 
     event.preventDefault();
-    renderPokemon(input.value.toLowerCase())
+    renderPokemon(input.value.toLowerCase()) /*aqui é dado o pokemon*/
     input.value = ""
 
 })
